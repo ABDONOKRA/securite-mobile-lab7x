@@ -20,6 +20,6 @@ L’image ne contient aucun Play Store
 
   ## Cloner MobSF pour utiliser les scripts AVD officiels   
   
-<img width="1178" height="282" alt="image" src="https://github.com/user-attachments/assets/3f4fbca1-5aff-442e-a12c-ba8c1ac00305" />
+<img width="1282" height="265" alt="image" src="https://github.com/user-attachments/assets/4fdd13ff-c9b6-497b-9313-00b5cd286a55" />
 
 
