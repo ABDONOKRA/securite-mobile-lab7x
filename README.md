@@ -25,4 +25,39 @@ L’image ne contient aucun Play Store
    ## Lancement de MobSF via Docker
 
 
-<img width="1430" height="532" alt="image" src="https://github.com/user-attachments/assets/9fe275d3-9b95-432c-ad46-b0c9920940e6" />
+<img width="1430" height="532" alt="image" src="https://github.com/user-attachments/assets/9fe275d3-9b95-432c-ad46-b0c9920940e6" />  
+
+  ## LOGIN:mobsf:mobsf
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bf7ba626-5fce-4fef-8fb2-6907ee72c221" />  
+## Apres login   
+
+
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ec726696-b66a-40c8-a91e-447a7ece5378" />  
+  ## Télécharger l'APK DIVA  
+  ### Lien de DIVA   
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/57b42ca0-c670-4600-8b3c-25981824d043" />
+
+  
+  <img width="1920" height="362" alt="image" src="https://github.com/user-attachments/assets/b3ab0588-a98c-4fc9-b41f-55e8680950fb" />  
+  ##  Upload de DIVA dans MobSF  
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a2acca4b-4801-4448-aa4e-539de4fc6797" />
+  ## Lanalyse de lapk
+
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5307b369-2463-4da3-91e9-27ab45c09974" />    
+  
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fda5bb3f-517c-458d-8727-55a96f1b3884" />    
+  
+  🔴 Security Score : 36/100 → application très vulnérable  
+    
+⚠️ 2/17 Exported Activities → activités accessibles sans permission  
+
+🔴 1/1 Exported Providers → Content Provider exposé  
+
+🎯 Target SDK 23, Min SDK 15 → très vieux, plein de vulnérabilités  
+
+
+
+
+
+
