@@ -163,16 +163,6 @@ Ce document résume les vulnérabilités critiques et les faiblesses de sécurit
 
 ---
 
-## 🛠 Recommandations Générales
-
-1.  **Restreindre les Composants Exportés** : Désactiver l’exportation des activités et providers inutiles ou mettre en place des permissions strictes.
-2.  **Sécuriser le Stockage** : Chiffrer toutes les données sensibles en local (utiliser `EncryptedSharedPreferences` et `Room` avec chiffrement).
-3.  **Nettoyer les Logs** : Supprimer tous les logs de production affichant des informations utilisateur ou techniques sensibles.
-4.  **Externaliser les Secrets** : Retirer les clés API et mots de passe du code. Utiliser un service de configuration sécurisée ou le NDK avec chiffrement.
-5.  **Valider les Entrées** : Implémenter une validation stricte côté client et serveur pour prévenir les injections (SQL, Commandes, XSS).
-6.  **Renforcer le Réseau** : Corriger la configuration TLS et implémenter un mécanisme de SSL Pinning plus robuste, non contournable facilement.
-
----
 
 **Note** : Ce rapport est basé sur une analyse dynamique et statique. Une revue manuelle du code source est recommandée pour confirmer certains points.
 
