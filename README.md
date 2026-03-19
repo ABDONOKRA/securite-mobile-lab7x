@@ -83,7 +83,106 @@ Après le clic, MobSF va automatiquement :
   # jai relancer lemulateure 
 
  <img width="1350" height="560" alt="image" src="https://github.com/user-attachments/assets/aa589ca4-2bc7-400d-96a0-13b5410165dc" />  
- ## le prob <img width="972" height="148" alt="image" src="https://github.com/user-attachments/assets/6751fa32-981e-4f9a-8fff-966ade531b7a" />
+ ## le prob <img width="972" height="148" alt="image" src="https://github.com/user-attachments/assets/6751fa32-981e-4f9a-8fff-966ade531b7a" />    
+ ## Lancement de l'Analyse Dynamique  
+ 
+ <img width="1556" height="421" alt="image" src="https://github.com/user-attachments/assets/7e389afb-5d52-4729-9557-2b51b82144b5" />
+
+  ## Interface Dynamic Analyzer  
+  <img width="1550" height="693" alt="image" src="https://github.com/user-attachments/assets/2af3243d-891b-469d-85f1-ec182b1763b9" />  
+  ## Logcat Stream en temps réel  
+  Le flux Logcat filtré pour le package jakhar.aseem.diva affiche en temps réel les logs système lors de l'installation de l'application. On peut voir les événements PACKAGE_ADDED et les vérifications de type MediaProvider.
+
+Utilité : Le Logcat Stream permet de détecter en live les fuites d'informations dans les logs (Challenge #1 — Insecure Logging). Des mots de passe, tokens ou données sensibles peuvent apparaître ici si l'application ne filtre pas ses logs en production.  
+##  TLS/SSL Security Tester  
+<img width="1104" height="820" alt="image" src="https://github.com/user-attachments/assets/e68def1f-51e4-41ab-9430-6e00a16e054c" />  
+## MobSF exécute une batterie de tests TLS/SSL sur DIVA  
+<img width="1109" height="438" alt="image" src="https://github.com/user-attachments/assets/193650f5-fefa-4e58-8b6f-6fecca74f183" />  
+
+  ## Challenge "Input Validation" — Missile Launch App
+<img width="1528" height="608" alt="image" src="https://github.com/user-attachments/assets/17e3ac84-817f-40db-b86c-d2b4090ff514" />  
+## Instrumentation Frida
+<img width="1501" height="669" alt="image" src="https://github.com/user-attachments/assets/66a615b7-8e27-4870-9744-4be734156e54" />    
+ 
+bypass_build_properties()  
+
+bypass_phonenumber()  
+
+bypass_deviceid()  
+
+bypass_imsi()  
+
+bypass_operator_name()  
+## Frida + crypto-aes-key + Shell Access root
+<img width="1501" height="669" alt="image" src="https://github.com/user-attachments/assets/eabe8b02-4041-4920-9d77-af64ebf21761" />  
+Le script Frida crypto-aes-key est sélectionné. Ce script intercepte les appels à SecretKeySpec et capture les clés AES utilisées par l'application en clair, en affichant leur contenu hexadécimal. En bas de page, le Shell Access donne un accès root direct à l'émulateur ([root@android] #)  
+
+<img width="910" height="666" alt="image" src="https://github.com/user-attachments/assets/cb39b738-7642-4c3a-910f-c48f672f6600" />
+# Rapport Dynamique Final
+<img width="1518" height="704" alt="image" src="https://github.com/user-attachments/assets/7e52010e-b249-4e16-95ce-4ecbb27b4360" />    
+
+Le rapport dynamique final présente :
+
+Information : Accès aux HTTPTools pour consulter le trafic brut.  
+
+Raw Logs : HTTP(S) Traffic | Logcat Logs | Dumpsys Logs | Application Data. 
+
+    
+TLS/SSL Security Tester : 4 tests passés (Cleartext Traffic, TLS Misconfiguration, TLS Pinning Bypass, TLS Pinning/Certificate Transparency). 
+
+  
+Exported Activity Tester : Tests des activités exportées accessibles sans permission.  
+
+Le menu latéral liste toutes les sections : Information, TLS/SSL Security Tester, Exported Activity Tester, Activity Tester, Screenshots, Runtime Dependencies, Malware Analysis, Reconnaissance, File Analysis, Download/Print Report.  
+# 🔐 Rapport d’Audit de Sécurité - [Nom de l'Application]
+
+Ce document résume les vulnérabilités critiques et les faiblesses de sécurité identifiées lors de l’analyse statique de l’application. L’objectif est de fournir une vision claire des risques et de prioriser les corrections.
+
+## 📊 Résumé des Vulnérabilités
+
+| Catégorie | Sévérité | Détail |
+| :--- | :--- | :--- |
+| **Security Score** | 🔴 Critique | **36/100** — Application extrêmement vulnérable |
+| **Exported Activities** | 🟠 Haut | 2/17 activités exportées sans restriction |
+| **Exported Providers** | 🔴 Critique | 1/1 Content Provider accessible sans permission |
+| **Insecure Data Storage** | 🔴 Critique | Données en clair (SharedPrefs, SQLite, Fichiers) |
+| **Insecure Logging** | 🟠 Haut | Données sensibles visibles dans Logcat |
+| **Hardcoded Credentials** | 🔴 Critique | Clés / mots de passe codés en dur dans l'APK |
+| **Input Validation** | 🔴 Critique | SQLi, XSS WebView, Buffer Overflow natif |
+| **Access Control** | 🟠 Haut | Activités et Providers accessibles sans authentification |
+| **TLS/SSL** | 🔵 Info | SSL Pinning contourné avec succès par MobSF |
+
+---
+
+## 🧾 Légende des Sévérités
+
+*   🔴 **Critique** : À corriger immédiatement. Risque élevé de compromission totale.
+*   🟠 **Haut** : Priorité haute. Exposition significative des données ou des fonctionnalités.
+*   🟡 **Moyen** : À planifier. Faiblesses nécessitant une attention.
+*   🔵 **Info** : Information ou faible risque. Bonnes pratiques à améliorer.
+
+---
+
+## 🛠 Recommandations Générales
+
+1.  **Restreindre les Composants Exportés** : Désactiver l’exportation des activités et providers inutiles ou mettre en place des permissions strictes.
+2.  **Sécuriser le Stockage** : Chiffrer toutes les données sensibles en local (utiliser `EncryptedSharedPreferences` et `Room` avec chiffrement).
+3.  **Nettoyer les Logs** : Supprimer tous les logs de production affichant des informations utilisateur ou techniques sensibles.
+4.  **Externaliser les Secrets** : Retirer les clés API et mots de passe du code. Utiliser un service de configuration sécurisée ou le NDK avec chiffrement.
+5.  **Valider les Entrées** : Implémenter une validation stricte côté client et serveur pour prévenir les injections (SQL, Commandes, XSS).
+6.  **Renforcer le Réseau** : Corriger la configuration TLS et implémenter un mécanisme de SSL Pinning plus robuste, non contournable facilement.
+
+---
+
+**Note** : Ce rapport est basé sur une analyse dynamique et statique. Une revue manuelle du code source est recommandée pour confirmer certains points.
+
+
+
+
+
+
+
+
     
 
 
