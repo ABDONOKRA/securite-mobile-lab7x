@@ -73,8 +73,18 @@ Après le clic, MobSF va automatiquement :
 
 ⏳ Ouvrir l'interface Dynamic Analyzer    
 
-<img width="736" height="156" alt="image" src="https://github.com/user-attachments/assets/fb06b063-da1a-4d9d-aff4-4e93547c5e1f" />  
+<img width="736" height="156" alt="image" src="https://github.com/user-attachments/assets/fb06b063-da1a-4d9d-aff4-4e93547c5e1f" />    
+
 <img width="736" height="180" alt="image" src="https://github.com/user-attachments/assets/43ddd1fa-81e7-4c11-94e0-2f36909e3816" />
+
+  
+  <img width="1101" height="146" alt="image" src="https://github.com/user-attachments/assets/855fc6bd-b4c9-4ffd-958c-6fa6f7a501ee" />
+
+  # jai relancer lemulateure 
+
+ <img width="1350" height="560" alt="image" src="https://github.com/user-attachments/assets/aa589ca4-2bc7-400d-96a0-13b5410165dc" />  
+ ## le prob <img width="972" height="148" alt="image" src="https://github.com/user-attachments/assets/6751fa32-981e-4f9a-8fff-966ade531b7a" />
+    
 
 
 
