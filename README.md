@@ -54,7 +54,29 @@ L’image ne contient aucun Play Store
 
 🔴 1/1 Exported Providers → Content Provider exposé  
 
-🎯 Target SDK 23, Min SDK 15 → très vieux, plein de vulnérabilités  
+🎯 Target SDK 23, Min SDK 15 → très vieux, plein de vulnérabilités      
+
+## Larchitecture     
+
+<img width="785" height="581" alt="image" src="https://github.com/user-attachments/assets/6f644bb5-0176-43cc-9644-9c827fb671ff" />  
+
+  Le bouton vert "Start Dynamic Analysis" !  
+  
+Après le clic, MobSF va automatiquement :  
+
+
+⏳ Installer DIVA sur l'émulateur  
+
+⏳ Lancer Frida Server  
+
+⏳ Configurer le proxy HTTPS global  
+
+⏳ Ouvrir l'interface Dynamic Analyzer    
+
+<img width="736" height="156" alt="image" src="https://github.com/user-attachments/assets/fb06b063-da1a-4d9d-aff4-4e93547c5e1f" />  
+<img width="736" height="180" alt="image" src="https://github.com/user-attachments/assets/43ddd1fa-81e7-4c11-94e0-2f36909e3816" />
+
+
 
 
 
